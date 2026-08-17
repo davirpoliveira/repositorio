@@ -10,17 +10,17 @@
             width: 10rem;
             height: 4rem;
             border: 1px solid black;
-            display: flex ;
+            display: flex;
             flex-direction: row;
             justify-content: center;
             text-align: right;
         }
-        #div1{
-            display: flex ;
+
+        #div1 {
+            display: flex;
             flex-direction: row;
             gap: 10rem
         }
-
     </style>
 
 </head>
@@ -28,24 +28,26 @@
 <body>
     <h3>Aprendendo JS</h3>
 
-    <button id="botao" >Cloque para adicionar no paragrafo.</button>
+    <button id="botao">Cloque para adicionar no paragrafo.</button>
     <div id="div1"></div>
+
+    <a href="form.html">Vai pro formulario.</a>
 
     <script>
         const dvi = document.getElementById('div1');
         const bota = document.getElementById('botao');
-        bota.addEventListener('click', ()=> adicionar());
+        bota.addEventListener('click', () => adicionar());
 
 
-        function adicionar(){
-        texto = prompt('aura e ego');
-        const p_texto = document.createElement('p');
-        p_texto.innerHTML = texto
-        dvi.append(p_texto);
-        p_texto.append(texto);
-        p_texto.setAttribute('class', 'st');
-       }
-    
+        function adicionar() {
+            texto = prompt('aura e ego');
+            const p_texto = document.createElement('p');
+            p_texto.innerHTML = texto
+            dvi.append(p_texto);
+            p_texto.append(texto);
+            p_texto.setAttribute('class', 'st');
+        }
+
 
 
     </script>

@@ -1,0 +1,9 @@
+#formulario {
+    display: flex;
+    flex-direction: column;
+    
+}
+#dados{
+    border: 1px solid black;
+    width: 30rem;
+}
