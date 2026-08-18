@@ -1,17 +1,16 @@
-#formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+#container {
+   width: 300px;
+   margin: 100px auto;
+   padding: 20px;
+   border: 1px solid black;
+   border-radius: 5px;
+   box-shadow: 0 0 10px black;
     
 }
-#dados{
-    border: 1px solid black;
-
-    align-items: center;
-}
-#container{
-    align-items: center;
-    justify-content: center;
+#formulario{
+   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
 }
