@@ -1,9 +1,17 @@
 #formulario {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     
 }
 #dados{
     border: 1px solid black;
-    width: 30rem;
+
+    align-items: center;
+}
+#container{
+    align-items: center;
+    justify-content: center;
 }
