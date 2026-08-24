@@ -16,26 +16,35 @@
         </header>
         <section id="container">
 
-            <form >
+            <form  >
                 <h1>Formulario no html</h1>
                 <div id="dados">
-
+                    <input type="hidden" name="scan" value="login">
                     <div>
-                        <input type="text" name="User_N" id="User_Id" placeholder="username">
+                        <input  type="text" name="User_N" id="User_Id" placeholder="username">
                     </div>
 
                     <div>
                         <input type="password" name="Passwords" id="Password_Id" placeholder="password">
 
                     </div>
+                    <div>
+                        <select name="tipo_usuario" id="tipo_usuario">
+                            <option value="ad">Adm</option>
+                            <option value="no">Normal</option>
+                            <option value="vi">Visitante</option>
+                        </select>
+                    </div>
                 </div>
             </form>
-            <button id="btnEntrar" type="button" onlick="efetuarLogin()">Entrar</button>
+            <button id="btnEntrar" type="button">Entrar</button>
         </section>
     </main>
 
     <script>
-        
+                const btn_entrar = document.getElementById('btn_entrar');
+        btn_entrar.addEventListener('click', efetuar_login);
+
         function efetuarLogin() {
             const usario = document.getElementById('User_Id').value;
             const senha = document.getElementById('Password_Id').value;
