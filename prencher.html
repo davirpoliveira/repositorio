@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Preenchimento de valores JS</h1>
+
+    <form>
+        <div class="cursos" id="cursos">
+             <h3>Cursos</h3>
+        </div>
+       
+
+
+    </form>
+    <script>
+        const cursos = ['Desenvolvimento de Software', 'Adiministração',
+         'Mecanica', 'Eletrônica', 'Logistica', 'Eletrotecnica'];
+
+        const divCursos = document.getElementById('cursos');
+
+         cursos.forEach((curso) => criarCurosoButton(curso));
+
+        
+        function criarCurosoButton(curso){
+
+            const cursoInput = document.createElement('input');
+            cursoInput.setAttribute('type', 'radio');
+            cursoInput.setAttribute("name", 'curso')
+            const labelCurso = document.createElement('label');
+            labelCurso.textContent = curso;
+            const br = document.createElement("br");
+
+            divCursos.append(cursoInput);
+            divCursos.appendChild(labelCurso);
+            divCursos.appendChild(br);
+
+        }
+        
+    </script>
+</body>
+</html>
