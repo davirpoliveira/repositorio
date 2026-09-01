@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+</head>
+
+<body>
+    <main id="mainCatalog">
+
+    </main>
+    <script>
+        const catalogPrdoutos = 
+        [
+            ['Notebook Dell', 'Notebook Dell i7 14" 500GB SSD ', 'Notebook', 7889.8]
+            ['Notebook Lenovo', 'I5 15" 250GB', 'Notebok', 6534.2]
+            ['Nintendo Swich', 'Video Game CPU Integrada Armazenamento de 32GB 4GB RAM', 'VideoGame', 2302.5]
+        ];
+
+         const mainCatalog = document.getElementById('mainCatalog');
+
+
+        catalogPrdoutos.forEach((produtos) => catalogo());
+
+       
+        function catalogo(produtos) {
+
+            const boxProduto = document.createElement('div');
+
+            mainCatalog.append(boxProduto);
+            const titleProduct = document.createElement('p')
+            titleProduct.textContent = produtos;
+            boxProduto.append(produtos)
+            catalago()
+        }
+
+
+    </script>
+</body>
+
+</html>
