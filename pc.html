@@ -11,7 +11,8 @@
             display: flex;
             flex-direction: column;
             width: 20%;
-            border-radius: 10%;
+            box-shadow: 8px 3px black;
+            
         }
 
         #mainCatalog {
@@ -23,6 +24,15 @@
 </head>
 
 <body>
+    <header>
+        <form>
+            <label>Qual é a categoria?</label>
+        
+            <input type="text" id="categoria" name="NomeCategoria">
+            <input type="submit" value="Pesquisar" id="Submit">
+        </form>
+       <!-- <button type="submit" id="Submit">Pesquisar com o filtro</button> -->
+    </header>
     <main id="mainCatalog">
 
     </main>
@@ -37,10 +47,20 @@
             ];
 
         const mainCatalog = document.getElementById('mainCatalog');
+        const submit = document.getElementById('Submit');
 
+        submit.addEventListener('click', efetuarPesquisa(filtro));
+
+        function efetuarPesquisa(filtro){
+            return filtro =
+
+        }
 
         catalogPrdoutos.forEach((produtos) => catalogo(produtos));
 
+
+
+        
 
         function catalogo(produto) {
 
