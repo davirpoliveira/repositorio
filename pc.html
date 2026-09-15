@@ -55,14 +55,16 @@
 
         function efetuarPesquisa(event) {
             event.preventDefault(); //Evita que a pagina recarregue.
-            
-            const filtro = document.getElementById('categoria').value; 
+
+            const filtro = document.getElementById('categoria').value;
             //aplico o filtro dizendo o nome da categoria
 
-           mainCatalog.innerHTML = ''; // limpa a tela 
+            mainCatalog.innerHTML = ''; // limpa a tela 
 
             catalogPrdoutos.forEach((produto) => { //forEach para a comparação
-                if (produto[2].toLowerCase().includes(filtro.toLowerCase()))
+                if (produto[0].toLowerCase().includes(filtro.toLowerCase()) ||
+                    produto[1].toLowerCase().includes(filtro.toLowerCase()) ||
+                    produto[2].toLowerCase().includes(filtro.toLowerCase()))
                 // O toLowerCase serve para deixar tudo minusculo, 
                 // diminuindo a taxa de erro do filtro
                 {
@@ -70,7 +72,7 @@
                 }
             });
         }
-        efetuarPesquisa({ preventDefault: () => {} });
+        efetuarPesquisa({ preventDefault: () => { } });
 
         function catalogo(produto) {
 
